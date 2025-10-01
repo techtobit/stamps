@@ -1,103 +1,58 @@
-import Image from "next/image";
-
+import { Button } from "@/components/ui/button"
+import Image from 'next/image';
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <main
+        style={{
+          backgroundImage: "url('/stampsmaker_home.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+        }}
+        className="w-full h-screen flex justify-center flex-col items-center gap-8 text-center"
+      >
+        <h1 className="w-5/6 text-3xl lg:text-8xl font-black text-[#FAFAFA]">
+          Custom Stamp Designe for Your businesses.
+        </h1>
+        <h5 className="w-5/6 lg:w-2/3 text-sm lg:text-2xl text-white">
+          “We create exclusive stamp collections tailored to your requirements.
+          From consultation to delivery, we help businesses and collectors across
+          the UAE get unique, handpicked stamps.”
+        </h5>
+        <div className="flex gap-6 flex-wrap items-center justify-center">
+
+          <a href="https://api.whatsapp.com/send?phone=971504761587" target="_blank" className="btn-primary flex items-center gap-2 bg-[#FAFAFA] text-green-600 px-4 py-[4px] rounded-md text-md lg:text-xl text-center">
+            <img src="/whatsapp.png" alt="WhatsApp" className="w-8 lg:w-10 h-8 lg:h-10" />
+            WhatsApp
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+
+          <a href="tel:+971504761587" className='flex justify-center items-center'>
+            <button className='relative bg-blue-100 w-10 lg:w-12 h-10 lg:h-12 flex justify-center items-center rounded-full text-white 
+     shadow-lg transform hover:scale-105 transition-transform duration-200'>
+              <span className="absolute inset-0 rounded-full bg-blue-100 opacity-50 animate-ping"></span>
+              <span className='relative z-20 p-0'> <img src='/call_icon.png' alt="call" /> </span>
+            </button>
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      {/* products section */}
+      <main className="w-full h-screen flex  flex-col items-center gap-8 text-center">
+        <h1 className="text-3xl font-black">
+          POPULAR STAMPS
+        </h1>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="border rounded-md p-4">
+
+            <img src="/stampsmaker_coverphoto.png" alt="Stamp 1" className="w-full h-auto mb-4" />
+            <h2 className="text-xl font-semibold">Stamp Title 1</h2>
+            <p className="text-gray-600">Brief description of Stamp 1.</p>
+          </div>
+
+        </div>
+
+      </main>
+    </>
   );
 }

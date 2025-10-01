@@ -47,20 +47,33 @@ export default function Home() {
       </main>
 
       {/* products section */}
-      <main className="w-full h-screen flex  flex-col items-center gap-8 text-center">
+      <main className="w-full max-h-max flex  flex-col items-center gap-8">
         <h1 className="text-3xl font-black">
           POPULAR STAMPS
         </h1>
-        <div className=" grid grid-cols-3 gap-10">
+        <div className="flex flex-wrap justify-center gap-10">
           {stamps.map((stamp, idx) => (
-            <div key={idx} className="border rounded-md p-4">
-              <img src={stamp.image} alt={stamp.name} className="w-[300px] h-[300px] h-auto mb-4" />
-              <h2 className="text-xl font-semibold">{stamp.name}</h2>
-              <p className="text-gray-600">Type: {stamp.type}</p>
-              <p className="text-gray-600">Size: {stamp.size}</p>
-              <p className="text-green-700 font-bold">Price: AED {stamp.price}</p>
+            <div key={idx} className="">
+              <img src={stamp.image} alt={stamp.name} className="w-[250px] h-[250px] border rounded-md p-4 mb-4" />
+              <div className="">
+                <h2 className="text-xl font-semibold">{stamp.name}</h2>
+                <p className="text-gray-600">Type: {stamp.type}</p>
+                <p className="text-gray-600">Size: {stamp.size}</p>
+                <p className="text-green-700 font-bold">Price: AED {stamp.price}</p>
+              </div>
             </div>
           ))}
+
+        </div>
+
+      </main>
+
+      {/* other services section  */}
+      <main className="w-full h-screen flex  flex-col items-center gap-8 text-center">
+        <h1 className="text-3xl font-black">
+          OTHER SERVICES
+        </h1>
+        <div className=" grid grid-cols-3 gap-10">
 
         </div>
 

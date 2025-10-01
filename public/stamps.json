@@ -54,12 +54,6 @@
 		"size": "38x38mm",
 		"type": "Special Edition",
 		"image": "/stamp08.png"
-	},
-	{
-		"name": "Modern Art Stamp",
-		"price": 20.0,
-		"size": "38x38mm",
-		"type": "Special Edition",
-		"image": "/stamp06.webp"
 	}
+
 ]

@@ -1,6 +1,15 @@
-import { Button } from "@/components/ui/button"
-import Image from 'next/image';
+"use client";
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  const [stamps, setStamps] = useState([]);
+
+  useEffect(() => {
+    fetch("/stamps.json")
+      .then((res) => res.json())
+      .then((data) => setStamps(data));
+  }, []);
+
   return (
     <>
       <main
@@ -42,13 +51,16 @@ export default function Home() {
         <h1 className="text-3xl font-black">
           POPULAR STAMPS
         </h1>
-        <div className="grid grid-cols-3 gap-4">
-          <div className="border rounded-md p-4">
-
-            <img src="/stampsmaker_coverphoto.png" alt="Stamp 1" className="w-full h-auto mb-4" />
-            <h2 className="text-xl font-semibold">Stamp Title 1</h2>
-            <p className="text-gray-600">Brief description of Stamp 1.</p>
-          </div>
+        <div className=" grid grid-cols-3 gap-10">
+          {stamps.map((stamp, idx) => (
+            <div key={idx} className="border rounded-md p-4">
+              <img src={stamp.image} alt={stamp.name} className="w-[300px] h-[300px] h-auto mb-4" />
+              <h2 className="text-xl font-semibold">{stamp.name}</h2>
+              <p className="text-gray-600">Type: {stamp.type}</p>
+              <p className="text-gray-600">Size: {stamp.size}</p>
+              <p className="text-green-700 font-bold">Price: AED {stamp.price}</p>
+            </div>
+          ))}
 
         </div>
 

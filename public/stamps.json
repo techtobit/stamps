@@ -1,0 +1,65 @@
+[
+	{
+		"name": "Classic UAE Stamp",
+		"price": 25.0,
+		"size": "40x40mm",
+		"type": "Commemorative",
+		"image": "/stamp01.webp"
+	},
+	{
+		"name": "Heritage Collection",
+		"price": 30.0,
+		"size": "45x45mm",
+		"type": "Definitive",
+		"image": "/stamp02.webp"
+	},
+	{
+		"name": "Modern Art Stamp",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/stamp03.webp"
+	},
+	{
+		"name": "Modern Art Stamp",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/stamp04.webp"
+	},
+	{
+		"name": "Modern Art Stamp",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/stamp05.webp"
+	},
+	{
+		"name": "Modern Art Stamp",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/stamp06.png"
+	},
+	{
+		"name": "Modern Art Stamp",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/stamp07.png"
+	},
+	{
+		"name": "Modern Art Stamp",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/stamp08.png"
+	},
+	{
+		"name": "Modern Art Stamp",
+		"price": 20.0,
+		"size": "38x38mm",
+		"type": "Special Edition",
+		"image": "/stamp06.webp"
+	}
+]

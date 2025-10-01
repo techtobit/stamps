@@ -1,0 +1,52 @@
+{
+  "other_services": [
+    {
+      "service_name": "Business card",
+      "color_code": "#E53935"
+    },
+    {
+      "service_name": "Bill Book",
+      "color_code": "#6A1B9A"
+    },
+    {
+      "service_name": "T-Shirt",
+      "color_code": "#2E7D32"
+    },
+    {
+      "service_name": "Leaflet",
+      "color_code": "#9CCC65"
+    },
+    {
+      "service_name": "Banner Printing",
+      "color_code": "#1E88E5"
+    },
+    {
+      "service_name": "Gold Foiling",
+      "color_code": "#FB8C00"
+    },
+    {
+      "service_name": "Sticker Printing",
+      "color_code": "#FDD835"
+    },
+    {
+      "service_name": "Diary Printing",
+      "color_code": "#43A047"
+    },
+    {
+      "service_name": "Box Printing",
+      "color_code": "#66BB6A"
+    },
+    {
+      "service_name": "Signboard / Lead",
+      "color_code": "#00838F"
+    },
+    {
+      "service_name": "Label Printing",
+      "color_code": "#1565C0"
+    },
+    {
+      "service_name": "Letter Head",
+      "color_code": "#C62828"
+    }
+  ]
+}

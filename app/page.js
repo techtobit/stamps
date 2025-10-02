@@ -140,7 +140,7 @@ export default function Home() {
           <h1 className="text-3xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-lg mb-2">
             Discover Our Other Services
           </h1>
-          <h4 className="text-md lg:text-xl font-extrabold italic text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-green-600">
+          <h4 className="text-xs lg:text-xl font-extrabold italic text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-green-600">
             Beyond Stamps: Creative Solutions for Your Business
           </h4>
         </div>
@@ -149,10 +149,10 @@ export default function Home() {
             <div className="reletaive" key={idx}>
               <div
                 style={{
-                  backgroundColor: service.color_code, marginLeft: "-10px", marginTop: "-10px"
+                  backgroundColor: service.color_code, marginLeft: "-0px", marginTop: "-0px"
                 }}
-                className="service_card_behind -z-10 w-8 lg:w-10 h-8 lg:h-10  absolute rounded-md"></div>
-              <div key={idx} className="service_card flex bg-white items-center gap-2 lg:gap-5 p-2 rounded-md shadow-xl " >
+                className="service_card_behind  -z-10 w-8 lg:w-10 h-8 lg:h-10  absolute rounded-md"></div>
+              <div key={idx} className="service_card flex bg-white items-center gap-2 lg:gap-5 p-2 rounded-md shadow-xl translate-2 transition hover:scale-103 hover:shadow-2xl duration-200" >
                 <div style={{ backgroundColor: service.color_code }} className="w-5 lg:w-8 h-5 lg:h-8 rounded-md text-white font-black flex items-center justify-center">{idx + 1}</div>
                 <h3 key={idx} className="text-[10px] lg:text-sm lg:font-semibold">{service.service_name}</h3>
               </div>

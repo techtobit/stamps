@@ -1,5 +1,4 @@
-{
-  "other_services": [
+[
     {
       "service_name": "Business card",
       "color_code": "#E53935"
@@ -48,5 +47,4 @@
       "service_name": "Letter Head",
       "color_code": "#C62828"
     }
-  ]
-}
+]

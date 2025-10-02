@@ -3,12 +3,21 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [stamps, setStamps] = useState([]);
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
     fetch("/stamps.json")
       .then((res) => res.json())
       .then((data) => setStamps(data));
   }, []);
+
+  useEffect(() => {
+    fetch("/other_services.json")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
+  console.log(services);
+
 
   return (
     <>
@@ -73,8 +82,20 @@ export default function Home() {
         <h1 className="text-3xl font-black">
           OTHER SERVICES
         </h1>
-        <div className=" grid grid-cols-3 gap-10">
-
+        <div className="grid grid-cols-4 justify-center gap-20">
+          {services.map((service, idx) => (
+            <div className="reletaive" key={idx}>
+              <div
+              style={{ backgroundColor: service.color_code, marginLeft: "-10px", marginTop: "-10px"
+               }}
+  
+                className="service_card_behind -z-10 w-10 h-10  absolute rounded-md"></div>
+              <div key={idx} className="service_card flex bg-white items-center gap-5 p-2 rounded-md shadow-xl " >
+                <div style={{ backgroundColor: service.color_code }} className="w-8 h-8 rounded-md text-white font-black flex items-center justify-center">{idx}</div>
+                <h3 key={idx} className="text-xl font-semibold">{service.service_name}</h3>
+              </div>
+            </div>
+          ))}
         </div>
 
       </main>

@@ -12,7 +12,7 @@
       "color_code": "#2E7D32"
     },
     {
-      "service_name": "Leaflet",
+      "service_name": "Leaflet Printing",
       "color_code": "#9CCC65"
     },
     {
@@ -40,11 +40,11 @@
       "color_code": "#00838F"
     },
     {
-      "service_name": "SCREEN PRINT",
+      "service_name": "Screen Printing",
       "color_code": "#3595B0"
     },
     {
-      "service_name": "DIGITAL PRINT",
+      "service_name": "Digital Printing",
       "color_code": "#156530"
     },
     {
@@ -52,7 +52,7 @@
       "color_code": "#53652F"
     },
     {
-      "service_name": "OFFSET PRINT",
+      "service_name": "Offset Printing",
       "color_code": "#2565CB"
     },
     {

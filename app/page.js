@@ -104,19 +104,17 @@ export default function Home() {
                     className="rounded-lg aspect-square bg-gray-100 mb-3 w-40 h-40 object-cover"
                   />
                   <CardTitle className="text-lg font-semibold mb-1 text-gray-800">{stamp.name}</CardTitle>
-                  <CardDescription className="text-sm mb-2 text-gray-500">
+                  <CardDescription className="text-sm mb-2 text-gray-500 text-center">
                     Size: {stamp.size} | Type: {stamp.type}
                   </CardDescription>
-                  <div className="flex items-center justify-between w-full mt-2">
-                    <span className="text-base font-bold text-green-700">AED {stamp.price} د.إ</span>
+    
                     <Button
                       onClick={() => sendToWhatsApp(stamp.image, stamp.name, stamp.size, stamp.type, stamp.price)}
                       size="sm"
-                      className="text-xs px-3 py-1 h-8 bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:from-green-500 hover:to-green-700 text-white rounded-md shadow transition duration-200"
+                      className="text-xs w-full px-3 py-1 h-8 bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:from-green-500 hover:to-green-700 text-white rounded-md shadow transition duration-200"
                     >
                       Order / Inquiry
                     </Button>
-                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -130,17 +128,17 @@ export default function Home() {
       {/* Stamps Maker Other Services Section */}
       <main
         style={{
-          backgroundImage: " url('/dubai_bg.svg')",
+          backgroundImage: "linear-gradient(rgba(116, 192, 211, 0.25), rgba(95, 212, 144, 0.29)), url('/dubai_bg.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         className="w-full max-h-max flex  flex-col items-center gap-8 text-center">
         {/* Stylish Other Services Titles */}
         <div className="w-full flex flex-col items-center gap-2 pt-4 pb-10">
-          <h1 className="text-3xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-lg mb-2">
+          <h1 className="text-xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-lg mb-2">
             Discover Our Other Services
           </h1>
-          <h4 className="text-xs lg:text-xl font-extrabold italic text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-green-600">
+          <h4 className="text-[10px] lg:text-xl font-extrabold italic text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-green-600">
             Beyond Stamps: Creative Solutions for Your Business
           </h4>
         </div>
@@ -153,7 +151,7 @@ export default function Home() {
                 }}
                 className="service_card_behind  -z-10 w-8 lg:w-10 h-8 lg:h-10  absolute rounded-md"></div>
               <div key={idx} className="service_card flex bg-white items-center gap-2 lg:gap-5 p-2 rounded-md shadow-xl translate-2 transition hover:scale-103 hover:shadow-2xl duration-200" >
-                <div style={{ backgroundColor: service.color_code }} className="w-5 lg:w-8 h-5 lg:h-8 rounded-md text-white font-black flex items-center justify-center">{idx + 1}</div>
+                <div style={{ backgroundColor: service.color_code }} className="w-5 lg:w-8 h-5 lg:h-8 rounded-md text-white text-[10px] lg:text-base font-black flex items-center justify-center">{idx + 1}</div>
                 <h3 key={idx} className="text-[10px] lg:text-sm lg:font-semibold">{service.service_name}</h3>
               </div>
             </div>

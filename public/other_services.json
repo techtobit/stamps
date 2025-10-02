@@ -40,8 +40,24 @@
       "color_code": "#00838F"
     },
     {
+      "service_name": "SCREEN PRINT",
+      "color_code": "#3595B0"
+    },
+    {
+      "service_name": "DIGITAL PRINT",
+      "color_code": "#156530"
+    },
+    {
       "service_name": "Label Printing",
-      "color_code": "#1565C0"
+      "color_code": "#53652F"
+    },
+    {
+      "service_name": "OFFSET PRINT",
+      "color_code": "#2565CB"
+    },
+    {
+      "service_name": "Shopping Bag",
+      "color_code": "#8265CB"
     },
     {
       "service_name": "Letter Head",

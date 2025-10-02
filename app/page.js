@@ -87,7 +87,7 @@ export default function Home() {
         <h1 className="text-3xl font-black">
           OTHER SERVICES
         </h1>
-        <div className="grid grid-cols-4 justify-center gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-center  gap-20">
           {services.map((service, idx) => (
             <div className="reletaive" key={idx}>
               <div

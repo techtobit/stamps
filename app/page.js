@@ -131,7 +131,7 @@ export default function Home() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="w-full max-h-max flex  flex-col items-center gap-8 text-center">
+        className="w-full max-h-max flex  flex-col gap-8 text-center">
         {/* Stylish Other Services Titles */}
         <div className="w-full flex flex-col items-center gap-2 pt-4 pb-10">
           <h1 className="text-xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-lg mb-2">
@@ -141,7 +141,7 @@ export default function Home() {
             Beyond Stamps: Creative Solutions for Your Business
           </h4>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-6 lg:gap-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center mx-5 lg:mx-10 gap-6 lg:gap-20">
           {services.map((service, idx) => (
             <div className="reletaive" key={idx}>
               <div

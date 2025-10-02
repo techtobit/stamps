@@ -23,10 +23,9 @@ export default function Home() {
     <>
       <main
         style={{
-          backgroundImage: "url('/stampsmaker_home.svg')",
+          backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/stampsmaker_home.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-
         }}
         className="w-full h-screen flex justify-center flex-col items-center gap-8 text-center"
       >
@@ -78,7 +77,13 @@ export default function Home() {
       </main>
 
       {/* other services section  */}
-      <main className="w-full h-screen flex  flex-col items-center gap-8 text-center">
+      <main
+        style={{
+          backgroundImage: " url('/dubai_bg.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }} 
+        className="w-full h-screen flex  flex-col items-center gap-8 text-center">
         <h1 className="text-3xl font-black">
           OTHER SERVICES
         </h1>
@@ -86,12 +91,11 @@ export default function Home() {
           {services.map((service, idx) => (
             <div className="reletaive" key={idx}>
               <div
-              style={{ backgroundColor: service.color_code, marginLeft: "-10px", marginTop: "-10px"
-               }}
-  
+                style={{ backgroundColor: service.color_code, marginLeft: "-10px", marginTop: "-10px"
+                }}
                 className="service_card_behind -z-10 w-10 h-10  absolute rounded-md"></div>
               <div key={idx} className="service_card flex bg-white items-center gap-5 p-2 rounded-md shadow-xl " >
-                <div style={{ backgroundColor: service.color_code }} className="w-8 h-8 rounded-md text-white font-black flex items-center justify-center">{idx}</div>
+                <div style={{ backgroundColor: service.color_code }} className="w-8 h-8 rounded-md text-white font-black flex items-center justify-center">{idx+1}</div>
                 <h3 key={idx} className="text-xl font-semibold">{service.service_name}</h3>
               </div>
             </div>

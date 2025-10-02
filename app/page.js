@@ -50,9 +50,15 @@ export default function Home() {
         }}
         className="w-full h-screen flex justify-center flex-col items-center gap-8 text-center"
       >
-        <h1 className="w-5/6 text-3xl lg:text-8xl font-black text-[#FAFAFA]">
-          Custom Stamp Designe for Your businesses.
-        </h1>
+        {/* Stylish Titles */}
+        <div className="w-5/6">
+          <h1 className="text-3xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-lg mb-2">
+            Elevate Your Brand with Custom Stamps
+          </h1>
+          <h4 className="text-2xl lg:text-6xl font-extrabold text-white drop-shadow-xl mb-2 tracking-wide italic">
+            Make Your Mark, Make It Unique!
+          </h4>
+        </div>
         <h5 className="w-5/6 lg:w-2/3 text-sm lg:text-2xl text-white">
           “We create exclusive stamp collections tailored to your requirements.
           From consultation to delivery, we help businesses and collectors across
@@ -78,18 +84,15 @@ export default function Home() {
               className="flex items-center gap-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white px-6 py-2 rounded-md text-md lg:text-xl shadow-lg transition duration-200"
             >
               <img src="/download-icon.png" alt="Download Brochure" className="w-8 lg:w-10 h-8 lg:h-10" />
-              Download Brochure
+              Brochure
             </button>
           </a>
         </div>
       </main>
 
       {/* Stamps Products Section */}
-      <main>
-      <section className="w-full py-16 bg-white flex flex-col items-center gap-8">
-        {/* <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
-          Popular Stamps
-        </h1> */}
+      <main className="">
+      <section className="w-full max-h-max bg-cyan-200 py-16 bg-white flex flex-col items-center gap-8">
         <div className="w-full max-w-7xl px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
             {stamps.map((stamp, idx) => (
@@ -131,21 +134,27 @@ export default function Home() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="w-full h-screen flex  flex-col items-center gap-8 text-center">
-        <h1 className="text-3xl font-black pt-4 pb-10">
-          OTHER SERVICES
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-center  gap-20">
+        className="w-full max-h-max flex  flex-col items-center gap-8 text-center">
+        {/* Stylish Other Services Titles */}
+        <div className="w-full flex flex-col items-center gap-2 pt-4 pb-10">
+          <h1 className="text-3xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-lg mb-2">
+            Discover Our Other Services
+          </h1>
+          <h4 className="text-md lg:text-xl font-extrabold italic text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-500 to-green-600">
+            Beyond Stamps: Creative Solutions for Your Business
+          </h4>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-6 lg:gap-20">
           {services.map((service, idx) => (
             <div className="reletaive" key={idx}>
               <div
                 style={{
                   backgroundColor: service.color_code, marginLeft: "-10px", marginTop: "-10px"
                 }}
-                className="service_card_behind -z-10 w-10 h-10  absolute rounded-md"></div>
-              <div key={idx} className="service_card flex bg-white items-center gap-5 p-2 rounded-md shadow-xl " >
-                <div style={{ backgroundColor: service.color_code }} className="w-8 h-8 rounded-md text-white font-black flex items-center justify-center">{idx + 1}</div>
-                <h3 key={idx} className="text-sm font-semibold uppercase">{service.service_name}</h3>
+                className="service_card_behind -z-10 w-8 lg:w-10 h-8 lg:h-10  absolute rounded-md"></div>
+              <div key={idx} className="service_card flex bg-white items-center gap-2 lg:gap-5 p-2 rounded-md shadow-xl " >
+                <div style={{ backgroundColor: service.color_code }} className="w-5 lg:w-8 h-5 lg:h-8 rounded-md text-white font-black flex items-center justify-center">{idx + 1}</div>
+                <h3 key={idx} className="text-[10px] lg:text-sm lg:font-semibold">{service.service_name}</h3>
               </div>
             </div>
           ))}

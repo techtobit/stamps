@@ -4,8 +4,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 import { useEffect, useState } from "react";
@@ -25,7 +23,19 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
-  console.log(services);
+
+  const sendToWhatsApp = (image, name, size, type, price) => {
+    const phone = "971504761587";
+    const message = `Hello, I am interested in:
+  Image: ${image}
+  Name: ${name}
+  Size: ${size}
+  Type: ${type}
+  Price: ${price}
+  Please provide more details.`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
 
 
   return (
@@ -48,16 +58,21 @@ export default function Home() {
         </h5>
         <div className="flex gap-6 flex-wrap items-center justify-center">
 
-          <a href="https://api.whatsapp.com/send?phone=971504761587" target="_blank" className="btn-primary flex items-center gap-2 bg-[#FAFAFA] text-green-600 px-4 py-[4px] rounded-md text-md lg:text-xl text-center">
+          <a
+            href="https://api.whatsapp.com/send?phone=971504761587"
+            target="_blank"
+            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-md text-md lg:text-xl shadow-lg transition duration-200"
+          >
             <img src="/whatsapp.png" alt="WhatsApp" className="w-8 lg:w-10 h-8 lg:h-10" />
             WhatsApp
           </a>
 
-          <a href="tel:+971504761587" className='flex justify-center items-center'>
-            <button className='relative bg-blue-100 w-10 lg:w-12 h-10 lg:h-12 flex justify-center items-center rounded-full text-white 
-     shadow-lg transform hover:scale-105 transition-transform duration-200'>
-              <span className="absolute inset-0 rounded-full bg-blue-100 opacity-50 animate-ping"></span>
-              <span className='relative z-20 p-0'> <img src='/call_icon.png' alt="call" /> </span>
+          <a href="tel:+971504761587" className="flex items-center cursor-pointer">
+            <button
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-md lg:text-xl shadow-lg transition duration-200"
+            >
+              <img src="/call_icon.png" alt="call" className="w-8 lg:w-10 h-8 lg:h-10" />
+              Call
             </button>
           </a>
         </div>
@@ -70,23 +85,24 @@ export default function Home() {
         </h1>
         <div className="flex flex-wrap justify-center gap-10">
           {stamps.map((stamp, idx) => (
-            <Card key={idx} className="w-95">
+            <Card key={idx} className="w-95 shadow-xl">
               <CardContent className="p-2">
-                  <img src={stamp.image} alt={stamp.name} className="rounded-md aspect-square rounded-md bg-gray-100 p-[1px] mb-2" />
+                <img src={stamp.image} alt={stamp.name} className="rounded-md aspect-square rounded-md bg-gray-100 p-[1px] mb-2" />
                 <CardTitle className="text-sm mb-1">{stamp.name}</CardTitle>
                 <CardDescription className="text-xs mb-2 line-clamp-2">
                   Size: {stamp.size} | Type: {stamp.type}
                 </CardDescription>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-bold">ADE : {stamp.price}  د.إ</span>
-                  <Button variant="outline" size="sm" className="text-xs px-2 py-1 h-7 cursor-pointer">Order/Inquiry</Button>
+                  <Button
+                    onClick={() => sendToWhatsApp(stamp.image, stamp.name, stamp.size, stamp.type, stamp.price)}
+                    size="sm" className="text-xs px-2 py-1 h-7 bg-green-600 hover:bg-green-700 text-white rounded-md  shadow-lg transition duration-200">Order/Inquiry</Button>
                 </div>
               </CardContent>
             </Card>
           ))}
 
         </div>
-
       </main>
 
       {/* other services section  */}

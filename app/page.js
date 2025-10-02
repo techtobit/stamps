@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <>
 
-    {/* stamps maker home page  */}
+      {/* stamps maker home page  */}
       <main
         style={{
           backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/stampsmaker_home.svg')",
@@ -64,7 +64,7 @@ export default function Home() {
           From consultation to delivery, we help businesses and collectors across
           the UAE get unique, handpicked stamps.”
         </h5>
-        <div className="flex gap-6 flex-wrap items-center justify-center">
+        <div className="flex gap-8 flex-wrap items-center justify-center">
 
           <a
             href="https://api.whatsapp.com/send?phone=971504761587"
@@ -76,15 +76,14 @@ export default function Home() {
           </a>
 
           <a
-            href="/Profile of SAKIB .pdf"
+            href="tel:+971504761587"
             download
-            className="flex items-center cursor-pointer"
+            className="flex items-center justify-center cursor-pointer relative"
           >
-            <button
-              className="flex items-center gap-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white px-6 py-2 rounded-md text-md lg:text-xl shadow-lg transition duration-200"
-            >
-              <img src="/download-icon.png" alt="Download Brochure" className="w-8 lg:w-10 h-8 lg:h-10" />
-              Brochure
+            <span className="absolute inline-flex h-[70%] w-[65%] animate-ping rounded-md bg-sky-400 opacity-75"></span>
+            <button className="flex z-20 items-center gap-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white px-6 py-2 rounded-md text-md lg:text-xl shadow-lg">
+              <img src="/stamp_call.png" alt="callus" className="w-8 lg:w-10 h-8 lg:h-10" />
+              Call Us
             </button>
           </a>
         </div>
@@ -92,22 +91,22 @@ export default function Home() {
 
       {/* Stamps Products Section */}
       <main className="">
-      <section className="w-full max-h-max bg-cyan-200 py-16 bg-white flex flex-col items-center gap-8">
-        <div className="w-full max-w-7xl px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
-            {stamps.map((stamp, idx) => (
-              <Card key={idx} className="w-full shadow-lg border border-gray-100 rounded-xl transition hover:scale-105 hover:shadow-2xl duration-200">
-                <CardContent className="p-4 flex flex-col items-center">
-                  <img
-                    src={stamp.image}
-                    alt={stamp.name}
-                    className="rounded-lg aspect-square bg-gray-100 mb-3 w-40 h-40 object-cover"
-                  />
-                  <CardTitle className="text-lg font-semibold mb-1 text-gray-800">{stamp.name}</CardTitle>
-                  <CardDescription className="text-sm mb-2 text-gray-500 text-center">
-                    Size: {stamp.size} | Type: {stamp.type}
-                  </CardDescription>
-    
+        <section className="w-full max-h-max bg-cyan-200 py-16 bg-white flex flex-col items-center gap-8">
+          <div className="w-full max-w-7xl px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
+              {stamps.map((stamp, idx) => (
+                <Card key={idx} className="w-full shadow-lg border border-gray-100 rounded-xl transition hover:scale-105 hover:shadow-2xl duration-200">
+                  <CardContent className="p-4 flex flex-col items-center">
+                    <img
+                      src={stamp.image}
+                      alt={stamp.name}
+                      className="rounded-lg aspect-square bg-gray-100 mb-3 w-40 h-40 object-cover"
+                    />
+                    <CardTitle className="text-lg font-semibold mb-1 text-gray-800">{stamp.name}</CardTitle>
+                    <CardDescription className="text-sm mb-2 text-gray-500 text-center">
+                      Size: {stamp.size} | Type: {stamp.type}
+                    </CardDescription>
+
                     <Button
                       onClick={() => sendToWhatsApp(stamp.image, stamp.name, stamp.size, stamp.type, stamp.price)}
                       size="sm"
@@ -115,20 +114,20 @@ export default function Home() {
                     >
                       Order / Inquiry
                     </Button>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </main>
-      
+
 
 
       {/* Stamps Maker Other Services Section */}
       <main
         style={{
-          backgroundImage: "linear-gradient(rgba(116, 192, 211, 0.25), rgba(95, 212, 144, 0.29)), url('/dubai_bg.svg')",
+          backgroundImage: "linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(95, 212, 144, 0.29)), url('/dubai_bg.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

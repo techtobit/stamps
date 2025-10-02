@@ -1,4 +1,13 @@
 "use client";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -61,15 +70,19 @@ export default function Home() {
         </h1>
         <div className="flex flex-wrap justify-center gap-10">
           {stamps.map((stamp, idx) => (
-            <div key={idx} className="">
-              <img src={stamp.image} alt={stamp.name} className="w-[250px] h-[250px] border rounded-md p-4 mb-4" />
-              <div className="">
-                <h2 className="text-xl font-semibold">{stamp.name}</h2>
-                <p className="text-gray-600">Type: {stamp.type}</p>
-                <p className="text-gray-600">Size: {stamp.size}</p>
-                <p className="text-green-700 font-bold">Price: AED {stamp.price}</p>
-              </div>
-            </div>
+            <Card key={idx} className="w-95">
+              <CardContent className="p-2">
+                  <img src={stamp.image} alt={stamp.name} className="rounded-md aspect-square rounded-md bg-gray-100 p-[1px] mb-2" />
+                <CardTitle className="text-sm mb-1">{stamp.name}</CardTitle>
+                <CardDescription className="text-xs mb-2 line-clamp-2">
+                  Size: {stamp.size} | Type: {stamp.type}
+                </CardDescription>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-bold">ADE : {stamp.price}  د.إ</span>
+                  <Button variant="outline" size="sm" className="text-xs px-2 py-1 h-7 cursor-pointer">Order/Inquiry</Button>
+                </div>
+              </CardContent>
+            </Card>
           ))}
 
         </div>
@@ -82,7 +95,7 @@ export default function Home() {
           backgroundImage: " url('/dubai_bg.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }} 
+        }}
         className="w-full h-screen flex  flex-col items-center gap-8 text-center">
         <h1 className="text-3xl font-black">
           OTHER SERVICES
@@ -91,11 +104,12 @@ export default function Home() {
           {services.map((service, idx) => (
             <div className="reletaive" key={idx}>
               <div
-                style={{ backgroundColor: service.color_code, marginLeft: "-10px", marginTop: "-10px"
+                style={{
+                  backgroundColor: service.color_code, marginLeft: "-10px", marginTop: "-10px"
                 }}
                 className="service_card_behind -z-10 w-10 h-10  absolute rounded-md"></div>
               <div key={idx} className="service_card flex bg-white items-center gap-5 p-2 rounded-md shadow-xl " >
-                <div style={{ backgroundColor: service.color_code }} className="w-8 h-8 rounded-md text-white font-black flex items-center justify-center">{idx+1}</div>
+                <div style={{ backgroundColor: service.color_code }} className="w-8 h-8 rounded-md text-white font-black flex items-center justify-center">{idx + 1}</div>
                 <h3 key={idx} className="text-xl font-semibold">{service.service_name}</h3>
               </div>
             </div>

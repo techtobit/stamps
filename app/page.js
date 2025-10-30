@@ -157,10 +157,10 @@ export default function Home() {
           ))}
         </div>
       </main>
-{/* 
-      <main className="w-full max-h-max bg-white py-16 flex flex-col items-center gap-8">
 
-      </main> */}
+      <main className="w-full max-h-max bg-white py-16 flex flex-col items-center gap-8">
+        
+      </main>
     </>
   );
 }

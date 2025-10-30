@@ -4,14 +4,14 @@
 		"price": 25.0,
 		"size": "40x40mm",
 		"type": "Commemorative",
-		"image": "/stamp01.webp"
+		"image": "/stamp01.jpg"
 	},
 	{
 		"name": "Heritage Collection",
 		"price": 30.0,
 		"size": "45x45mm",
 		"type": "Definitive",
-		"image": "/stamp02.webp"
+		"image": "/stamp02.jpeg"
 	},
 	{
 		"name": "Modern Art Stamp",

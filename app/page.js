@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { useEffect, useState } from "react";
+import stampIcon from "../public/stamp01.jpg"
 
 export default function Home() {
   const [stamps, setStamps] = useState([]);
@@ -86,6 +87,25 @@ export default function Home() {
               Call Us
             </button>
           </a>
+        </div>
+      </main>
+
+      <main className="w-full py-5 grid grid-cols-4 justify-center gap-4 px-8 bg-gradient-to-r from-green-400 via-green-500 to-green-600 text-white">
+        <div className="flex flex-col items-center justify-center border-r-2 gap-2">
+          <img src="icons/stamp-solid-full.svg" alt="delivery" className="w-8 lg:w-10 h-8 lg:h-10" />
+          <p className="text-xs font-bold uppercase">Custom Design</p>
+        </div>
+        <div className="flex flex-col items-center justify-center border-r-2 gap-2">
+          <img src="icons/truck-fast-solid-full.svg" alt="delivery" className="w-8 lg:w-10 h-8 lg:h-10" />
+          <p className="text-xs font-bold uppercase">Free Delivery</p>
+        </div>
+        <div className="flex flex-col items-center justify-center border-r-2 gap-2">
+          <img src="icons/discount.svg" alt="delivery" className="w-8 lg:w-10 h-8 lg:h-10" />
+          <p className="text-xs font-bold uppercase">Moneyback Guarantee</p>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-2">
+          <img src="icons/phone.svg" alt="delivery" className="w-8 lg:w-10 h-8 lg:h-10" />
+          <p className="text-xs font-bold uppercase">24/7 Support</p>
         </div>
       </main>
 

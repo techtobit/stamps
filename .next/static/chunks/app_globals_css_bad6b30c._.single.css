@@ -159,6 +159,7 @@
     --text-8xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --font-weight-black: 900;
     --tracking-wide: .025em;
@@ -816,6 +817,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .grid-rows-\[auto_auto\] {
     grid-template-rows: auto auto;
   }
@@ -854,6 +859,10 @@
 
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
 
   .gap-6 {
@@ -903,6 +912,11 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+
+  .border-r-2 {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 2px;
   }
 
   .border-gray-100 {
@@ -1005,12 +1019,20 @@
     padding-inline: calc(var(--spacing) * 6);
   }
 
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
   }
 
   .py-16 {
@@ -1082,6 +1104,11 @@
     font-weight: var(--font-weight-black);
   }
 
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
@@ -1120,6 +1147,10 @@
 
   .text-white {
     color: var(--color-white);
+  }
+
+  .uppercase {
+    text-transform: uppercase;
   }
 
   .italic {

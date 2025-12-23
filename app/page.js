@@ -186,7 +186,7 @@ export default function Home() {
           <p className="text-sm">&copy; {new Date().getFullYear()} Stamps Maker. All rights reserved </p>
           <p className="text-sm pl-[2px]">| Developed by <a className="text-green-600 italic" href='https://ashrafuddin.vercel.app/' target="_blank">TTB</a> </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-5">
           <a href="/privacy_policy.html" className="text-sm hover:underline">Privacy Policy</a>
           <a href="/terms_and_conditions.html" className="text-sm hover:underline">Terms & Conditions</a>
         </div>

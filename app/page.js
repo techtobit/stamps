@@ -90,6 +90,7 @@ export default function Home() {
         </div>
       </main>
 
+      {/* quick features section  */}
       <main className="w-full py-5 grid grid-cols-4 justify-center gap-4 px-8 bg-gradient-to-r from-green-400 via-green-500 to-green-600 text-white">
         <div className="flex flex-col items-center justify-center border-r-2 gap-2">
           <img src="icons/stamp-solid-full.svg" alt="delivery" className="w-8 lg:w-10 h-8 lg:h-10" />
@@ -178,9 +179,24 @@ export default function Home() {
         </div>
       </main>
 
-      <main className="w-full max-h-max bg-white py-16 flex flex-col justify-between items-center gap-8">
+      {/* success story */}
+      <main className="w-full py-5 grid grid-cols-3 justify-center gap-4 px-8 bg-gradient-to-r from-green-400 via-green-500 to-green-600 text-white">
+        <div className="flex flex-col items-center justify-center border-r-2 gap-2">
+          <p className="text-3xl font-bold">78+</p>
+          <p className="text-sm font-bold uppercase">Happy Customer</p>
+        </div>
+        <div className="flex flex-col items-center justify-center border-r-2 gap-2">
+          <p className="text-3xl font-bold">06+</p>
+          <p className="text-sm font-bold uppercase">Locations</p>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-2">
+          <p className="text-3xl font-bold">20+</p>
+          <p className="text-sm font-bold uppercase">Services</p>
+        </div>
 
       </main>
+
+      {/* footer section   */}
       <footer className="w-full bg-gray-800 text-white flex items-center justify-between px-8 flex-wrap">
         <div className="flex">
           <p className="text-sm">&copy; {new Date().getFullYear()} Stamps Maker. All rights reserved </p>
